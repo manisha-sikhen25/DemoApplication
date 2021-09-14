@@ -1,0 +1,25 @@
+---
+
+kind: pipeline
+type: docker
+name: deployment
+
+
+steps:
+- name: dotnet-build
+  image: mcr.microsoft.com/dotnet/sdk
+  commands: 
+      - dotnet --version
+      - pwd
+      - cd /drone/DemoApplication
+      - ls
+      - dotnet restore /drone/DemoApplication/DemoApplication.vbproj
+      - pwd
+      - ls
+      - dotnet build /drone/DemoApplication/DemoApplication.vbproj --configuration Release --output /drone/DemoApplication/output
+      - ls
+      - cd output
+      - ls
+      - pwd
+      
+---
