@@ -2,7 +2,6 @@ kind: pipeline
 type: docker
 name: deployment
 
-
 steps:
 - name: dotnet-build
   image: mcr.microsoft.com/dotnet/dotnet-framework-sdk:4.8-windowsservercore-1809-v3
