@@ -9,12 +9,12 @@ steps:
   commands: 
       - dotnet --version
       - pwd
-      - cd /drone/DemoApplication
+      - cd /DemoApplication
       - ls
-      - dotnet restore /drone/DemoApplication/DemoApplication.vbproj
+      - dotnet restore /DemoApplication/DemoApplication.vbproj
       - pwd
       - ls
-      - dotnet build /drone/DemoApplication/DemoApplication.vbproj --configuration Release --output /drone/DemoApplication/output
+      - dotnet build /DemoApplication/DemoApplication.vbproj --configuration Release --output /DemoApplication/output
       - ls
       - cd output
       - ls
