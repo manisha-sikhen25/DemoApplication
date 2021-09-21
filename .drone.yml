@@ -4,7 +4,7 @@ name: deployment
 
 steps:
 - name: dotnet-build
-  image: mcr.microsoft.com/dotnet/sdk:4.8
+  image: mcr.microsoft.com/dotnet/sdk
   commands: 
       - dotnet --version
       - pwd
